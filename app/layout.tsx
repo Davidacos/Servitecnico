@@ -8,22 +8,13 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-poppins' });
 
 export const metadata: Metadata = {
-  title: 'SERVITECNICO ELECTRONIC | Línea Hogar y Computadores',
-  description: 'Expertos en reparación y mantenimiento de lavadoras, neveras, secadoras y servicio técnico de computadores. Servicio a domicilio en toda Bogotá.',
-  generator: 'v0.app',
+  title: 'SERVITECNICO ELECTRONIC | Línea Hogar, Computadores y Cundinamarca',
+  description: 'Expertos en reparación y mantenimiento de lavadoras, neveras, secadoras y servicio técnico de computadores. Servicio a domicilio en Bogotá, Soacha y toda Cundinamarca.',
+  generator: 'Servitecnico',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/logo-servitecnico-azul.png',
       },
     ],
     apple: '/apple-icon.png',

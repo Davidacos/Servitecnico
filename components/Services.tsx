@@ -1,3 +1,4 @@
+"use client";
 import {
   WashingMachine,
   Refrigerator,
@@ -103,7 +104,7 @@ export default function Services() {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2">
                   {svc.tags.map((tag) => (
                     <span
                       key={tag}
@@ -113,6 +114,17 @@ export default function Services() {
                     </span>
                   ))}
                 </div>
+
+                {/* Cotizar Button */}
+                <button
+                  onClick={() => {
+                    const message = `*Hola, quiero cotizar el servicio de:*%0A*${svc.title}*`;
+                    window.open(`https://wa.me/573008032230?text=${message}`, "_blank");
+                  }}
+                  className="mt-2 w-full py-2.5 bg-primary/10 border border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 text-sm"
+                >
+                  Cotizar ahora
+                </button>
               </div>
             );
           })}

@@ -14,13 +14,22 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
+
+    const whatsappNumber = "+573008032230";
+    const message = `*Hola, quiero solicitar un servicio:*%0A%0A*Nombre:* ${form.nombre}%0A*Tel\u00e9fono:* ${form.telefono}%0A*Problema:* ${form.mensaje}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    // Mark as sent and clear form
     setSent(true);
     setLoading(false);
     setForm({ nombre: "", telefono: "", mensaje: "" });
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
   };
 
   return (

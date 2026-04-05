@@ -29,21 +29,21 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-5 lg:col-span-1">
           <div className="flex items-center gap-2">
-            <span className="bg-primary/80 p-1.5 rounded-lg">
-              <Wrench className="w-5 h-5 text-white" />
-            </span>
-            <span className="font-poppins font-bold text-lg md:text-xl">
-              SERVITECNICO <span className="text-accent">ELECTRONIC</span>
-            </span>
+            <img
+              src="/logo-servitecnico-blanco.png"
+              alt="Servitecnico Electronic Logo"
+              className="h-14 md:h-18 w-auto"
+            />
           </div>
           <p className="text-white/60 text-sm leading-relaxed">
             Servicio técnico especializado en reparación y mantenimiento de
-            electrodomésticos de línea blanca en Bogotá D.C.
+            electrodomésticos de línea blanca y computadores en Bogotá, Soacha y
+            Cundinamarca.
           </p>
           <div className="flex flex-col gap-3 text-sm text-white/60">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 flex-shrink-0 text-accent" />
-              Bogotá D.C., Colombia
+              Bogotá D.C., Soacha y Cundinamarca, Colombia
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 flex-shrink-0 text-accent" />
@@ -58,9 +58,7 @@ export default function Footer() {
 
         {/* Quick links */}
         <div className="space-y-5">
-          <h4 className="font-poppins font-semibold text-white">
-            Navegación
-          </h4>
+          <h4 className="font-poppins font-semibold text-white">Navegación</h4>
           <ul className="space-y-3">
             {quickLinks.map((link) => (
               <li key={link.href}>
@@ -77,9 +75,7 @@ export default function Footer() {
 
         {/* Services */}
         <div className="space-y-5">
-          <h4 className="font-poppins font-semibold text-white">
-            Servicios
-          </h4>
+          <h4 className="font-poppins font-semibold text-white">Servicios</h4>
           <ul className="space-y-3">
             {services.map((svc) => (
               <li key={svc}>
@@ -123,8 +119,18 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
-          <p>© {new Date().getFullYear()} Servitecnico Electronic. Todos los derechos reservados.</p>
-          <p>Diseñado con profesionalismo para la ciudad de Bogotá</p>
+          <p>
+            © {new Date().getFullYear()}{" "}
+            <a
+              href="https://fenixcom.fenixsuite.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FenixCom
+            </a>{" "}
+            . Todos los derechos reservados.
+          </p>
+          <p>Atención profesional en Bogotá, Soacha y toda Cundinamarca</p>
         </div>
       </div>
     </footer>

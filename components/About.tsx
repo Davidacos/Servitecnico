@@ -19,7 +19,7 @@ const values = [
   {
     icon: Users,
     title: "Más de 500 Clientes",
-    desc: "Hogares y negocios en toda Bogotá confían en nosotros para sus electrodomésticos.",
+    desc: "Hogares y negocios en Bogotá, Soacha y toda Cundinamarca confían en nosotros.",
   },
 ];
 
@@ -57,13 +57,12 @@ export default function About() {
               Sobre Nosotros
             </span>
             <h2 className="font-poppins text-3xl md:text-4xl font-bold text-foreground text-balance">
-              Tu servicio técnico de confianza en Bogotá
+              Tu servicio técnico de confianza en Bogotá y Cundinamarca
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Somos un equipo de técnicos especializados en reparación y
               mantenimiento de equipos de cómputo y electrodomésticos de línea blanca. Llevamos más
-              de 10 años atendiendo hogares y empresas en toda la ciudad de
-              Bogotá y Soacha, siempre con honestidad, rapidez y calidad garantizada.
+              de 10 años atendiendo hogares y empresas en Bogotá, Soacha y toda Cundinamarca, siempre con honestidad, rapidez y calidad garantizada.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Nos diferenciamos por la transparencia en nuestros precios, la

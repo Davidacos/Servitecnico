@@ -5,6 +5,7 @@ const zones = [
   "Kennedy", "Bosa", "Fontibón", "Teusaquillo",
   "Puente Aranda", "Antonio Nariño", "Rafael Uribe", "Ciudad Bolívar",
   "Mártires", "Santa Fe", "La Candelaria", "Barrios Unidos",
+  "Soacha", "Cundinamarca",
 ];
 
 export default function Coverage() {
@@ -25,11 +26,11 @@ export default function Coverage() {
               </span>
             </div>
             <h2 className="font-poppins text-3xl md:text-4xl font-bold text-white text-balance">
-              Servicio a domicilio en toda Bogotá y Soacha
+              Servicio a domicilio en Bogotá, Soacha y Cundinamarca
             </h2>
             <p className="text-white/70 leading-relaxed">
-              No importa en qué localidad estés, llegamos hasta tu puerta. Nuestros
-              técnicos se desplazan a toda la ciudad de Bogotá D.C. y Soacha con puntualidad
+              No importa dónde te encuentres, llegamos hasta tu puerta. Nuestros
+              técnicos se desplazan a Bogotá, Soacha y toda Cundinamarca con puntualidad
               y profesionalismo. Solo contáctanos y coordinamos la visita.
             </p>
           </div>
@@ -39,7 +40,7 @@ export default function Coverage() {
               <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
               <div>
                 <h4 className="text-white font-semibold text-sm">Sin costo de desplazamiento</h4>
-                <p className="text-white/60 text-sm">La visita de diagnóstico no tiene costo adicional en Bogotá y Soacha.</p>
+                <p className="text-white/60 text-sm">La visita de diagnóstico no tiene costo adicional en Bogotá, Soacha y cercanías.</p>
               </div>
             </div>
             <div className="flex items-start gap-3 bg-white/10 rounded-xl p-4">

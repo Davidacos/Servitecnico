@@ -78,7 +78,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/80 text-lg leading-relaxed max-w-lg">
-              Reparamos computadores y contamos con expertos en línea hogar: lavadoras, neveras y secadoras. Técnicos certificados listos para visitarte en Bogotá.
+              Reparamos computadores y contamos con expertos en línea hogar: lavadoras, neveras y secadoras. Técnicos certificados listos para visitarte en Bogotá, Soacha y toda Cundinamarca.
             </p>
 
             {/* Trust chips */}
@@ -105,10 +105,13 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => scrollTo("#servicios")}
+                onClick={() => {
+                  const message = "*Hola, deseo cotizar un servicio t\u00e9cnico:*";
+                  window.open(`https://wa.me/573008032230?text=${message}`, "_blank");
+                }}
                 className="inline-flex items-center gap-2 border-2 border-white/25 text-white hover:border-white/50 hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all duration-200 text-base"
               >
-                Ver servicios
+                Cotizar ahora
               </button>
             </div>
 

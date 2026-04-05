@@ -33,19 +33,25 @@ export default function Navbar() {
         scrolled ? "bg-white/95 shadow-md backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#inicio"
-          onClick={(e) => { e.preventDefault(); handleNav("#inicio"); }}
+          onClick={(e) => {
+            e.preventDefault();
+            handleNav("#inicio");
+          }}
           className="flex items-center gap-2 group"
         >
-          <span className="bg-primary text-primary-foreground p-1.5 rounded-lg">
-            <Wrench className="w-5 h-5" />
-          </span>
-          <span className={`font-poppins font-bold text-lg md:text-xl transition-colors duration-200 ${scrolled ? "text-foreground" : "text-white"}`}>
-            SERVITECNICO <span className={scrolled ? "text-primary" : "text-white"}>ELECTRONIC</span>
-          </span>
+          <img
+            src={
+              scrolled
+                ? "/logo-servitecnico-azul.png"
+                : "/logo-servitecnico-blanco.png"
+            }
+            alt="Servitecnico Electronic Logo"
+            className="h-14 md:h-18 w-auto transition-all duration-300"
+          />
         </a>
 
         {/* Desktop links */}
