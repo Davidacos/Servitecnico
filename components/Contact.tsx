@@ -4,12 +4,17 @@ import { useState } from "react";
 import { Send, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 
 export default function Contact() {
-  const [form, setForm] = useState({ nombre: "", telefono: "", mensaje: "" });
+  const [form, setForm] = useState({
+    nombre: "",
+    telefono: "",
+    mensaje: "",
+    urgencia: "Normal",
+  });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -19,14 +24,16 @@ export default function Contact() {
     setLoading(true);
 
     const whatsappNumber = "+573008032230";
-    const message = `*Hola, quiero solicitar un servicio:*%0A%0A*Nombre:* ${form.nombre}%0A*Tel\u00e9fono:* ${form.telefono}%0A*Problema:* ${form.mensaje}`;
+    const message = `*Hola, quiero solicitar un servicio:*%0A%0A*Nombre:* ${form.nombre}%0A*Tel\u00e9fono:* ${form.telefono}%0A*Urgencia:* ${form.urgencia}%0A*Problema:* ${form.mensaje}`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
     // Mark as sent and clear form
     setSent(true);
     setLoading(false);
-    setForm({ nombre: "", telefono: "", mensaje: "" });
+    setSent(true);
+    setLoading(false);
+    setForm({ nombre: "", telefono: "", mensaje: "", urgencia: "Normal" });
 
     // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank");
@@ -154,6 +161,26 @@ export default function Contact() {
                   placeholder="Ej: 300 803 2230"
                   className="w-full border border-input bg-background rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
                 />
+              </div>
+
+              {/* Urgencia */}
+              <div className="space-y-1.5">
+                <label htmlFor="urgencia" className="text-sm font-medium text-foreground">
+                  Nivel de Urgencia <span className="text-destructive">*</span>
+                </label>
+                <select
+                  id="urgencia"
+                  name="urgencia"
+                  required
+                  value={form.urgencia}
+                  onChange={handleChange}
+                  className="w-full border border-input bg-background rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                >
+                  <option value="Baja">Baja - Mantenimiento general</option>
+                  <option value="Normal">Normal - Revisión estándar</option>
+                  <option value="Alta">Alta - Equipo no funciona</option>
+                  <option value="Urgente">⚠️ Urgente - Reparación inmediata</option>
+                </select>
               </div>
 
               {/* Mensaje */}
