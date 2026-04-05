@@ -1,6 +1,13 @@
 "use client";
 
-import { ArrowRight, ShieldCheck, Clock, Star, Wrench, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Clock,
+  Star,
+  Wrench,
+  Phone,
+} from "lucide-react";
 
 const stats = [
   { value: "+500", label: "Equipos reparados" },
@@ -10,7 +17,7 @@ const stats = [
 ];
 
 const trust = [
-  { icon: ShieldCheck, text: "Diagnóstico gratis" },
+  { icon: ShieldCheck, text: "Agendamiento inmediato" },
   { icon: Clock, text: "Servicio en el día" },
   { icon: Star, text: "Garantía en repuestos" },
 ];
@@ -24,17 +31,24 @@ export default function Hero() {
     <section
       id="inicio"
       className="relative overflow-hidden w-full min-h-screen flex items-center pt-24 pb-20"
-      style={{ background: "linear-gradient(145deg, #0a1628 0%, #0d2347 50%, #0a3d6e 100%)" }}
+      style={{
+        background:
+          "linear-gradient(145deg, #0a1628 0%, #0d2347 50%, #0a3d6e 100%)",
+      }}
     >
       {/* Decorative circles */}
       <div
         className="absolute top-[-120px] right-[-120px] w-[500px] h-[500px] rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #3b82f6 0%, transparent 70%)",
+        }}
         aria-hidden="true"
       />
       <div
         className="absolute bottom-[100px] left-[-80px] w-[300px] h-[300px] rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #60a5fa 0%, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #60a5fa 0%, transparent 70%)",
+        }}
         aria-hidden="true"
       />
 
@@ -51,10 +65,8 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 w-full z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-
           {/* ── LEFT ── */}
           <div className="py-10 space-y-8">
-
             {/* Pill badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -78,7 +90,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/80 text-lg leading-relaxed max-w-lg">
-              Reparamos computadores y contamos con expertos en línea hogar: lavadoras, neveras y secadoras. Técnicos certificados listos para visitarte en Bogotá, Soacha y toda Cundinamarca.
+              Reparamos computadores y contamos con expertos en línea hogar:
+              lavadoras, neveras y secadoras. Técnicos certificados listos para
+              visitarte en Bogotá, Soacha y toda Cundinamarca.
             </p>
 
             {/* Trust chips */}
@@ -106,8 +120,12 @@ export default function Hero() {
               </button>
               <button
                 onClick={() => {
-                  const message = "*Hola, deseo cotizar un servicio t\u00e9cnico:*";
-                  window.open(`https://wa.me/573008032230?text=${message}`, "_blank");
+                  const message =
+                    "*Hola, deseo cotizar un servicio t\u00e9cnico:*";
+                  window.open(
+                    `https://wa.me/573008032230?text=${message}`,
+                    "_blank",
+                  );
                 }}
                 className="inline-flex items-center gap-2 border-2 border-white/25 text-white hover:border-white/50 hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all duration-200 text-base"
               >
@@ -119,8 +137,12 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
               {stats.map((s) => (
                 <div key={s.label} className="flex flex-col gap-0.5">
-                  <span className="font-poppins text-3xl font-bold text-white">{s.value}</span>
-                  <span className="text-white/70 text-xs leading-relaxed">{s.label}</span>
+                  <span className="font-poppins text-3xl font-bold text-white">
+                    {s.value}
+                  </span>
+                  <span className="text-white/70 text-xs leading-relaxed">
+                    {s.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -154,9 +176,13 @@ export default function Hero() {
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                     <Wrench className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="text-green-600 font-bold text-sm">Activo</span>
+                  <span className="text-green-600 font-bold text-sm">
+                    Activo
+                  </span>
                 </div>
-                <p className="text-gray-500 text-xs">Disponible hoy para visita</p>
+                <p className="text-gray-500 text-xs">
+                  Disponible hoy para visita
+                </p>
               </div>
 
               <img
@@ -170,7 +196,10 @@ export default function Hero() {
       </div>
 
       {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 z-0 text-[100px]" aria-hidden="true">
+      <div
+        className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 z-0 text-[100px]"
+        aria-hidden="true"
+      >
         <svg
           viewBox="0 0 1440 80"
           xmlns="http://www.w3.org/2000/svg"
