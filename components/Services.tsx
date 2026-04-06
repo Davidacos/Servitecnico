@@ -119,7 +119,10 @@ export default function Services() {
                 <button
                   onClick={() => {
                     const message = `*Hola, quiero cotizar el servicio de:*%0A*${svc.title}*`;
-                    window.open(`https://wa.me/573008032230?text=${message}`, "_blank");
+                    window.open(
+                      `https://wa.me/573008032230?text=${message}`,
+                      "_blank",
+                    );
                   }}
                   className="mt-2 w-full py-2.5 bg-primary/10 border border-primary/20 text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 text-sm"
                 >
