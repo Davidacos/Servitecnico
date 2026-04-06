@@ -40,18 +40,21 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
+        className={`${inter.variable} ${poppins.variable} font-sans antialiased overflow-x-hidden`}
       >
         {children}
+
+        {/* Botón WhatsApp */}
         <a
           href="https://wa.me/573008032230"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:-translate-y-1 transition-all z-50 flex items-center justify-center cursor-pointer"
+          className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:-translate-y-1 transition-all z-50 flex items-center justify-center"
           aria-label="Contactar por WhatsApp"
         >
           <MessageCircle className="w-8 h-8" />
         </a>
+
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
